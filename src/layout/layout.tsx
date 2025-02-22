@@ -1,5 +1,3 @@
-//// filepath: /C:/Yoga/Programming/trd-company-profile/src/layout/layout.tsx
-
 import { Outlet } from 'react-router-dom';
 import Footer from './Component/footer';
 import Navbar from './Component/navbar';
