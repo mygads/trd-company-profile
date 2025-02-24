@@ -36,29 +36,27 @@ const ExpertiseSection: React.FC = () => {
             <div className="container mx-auto px-4">
                 <div className="relative">
                     {/* Section Title */}
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-[#7D0202] leading-tight flex items-center justify-center gap-4">
-                            <div className="w-12 h-1 bg-amber-400"></div>
+                    <div className="text-center mb-12 px-4">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#7D0202] leading-tight flex items-center justify-center flex-col lg:flex-row gap-2 lg:gap-4">
+                            <div className="lg:w-12 bg-amber-400 w-20 h-1 md:h-2"></div>
                             Our Proven Expertise in Every Project
                         </h2>
-                        <p className="text-lg leading-relaxed mt-10">
-                            Our expertise is built on years of experience and a track record of successful projects. <br /> From residential to commercial solutions, we deliver excellence every time!
+                        <p className="text-md md:text-lg leading-relaxed mt-6 md:mt-10">
+                            Our expertise is built on years of experience and a track record of successful projects. <br className="hidden md:block" /> From residential to commercial solutions, we deliver excellence every time!
                         </p>
                     </div>
 
                     {/* Decorative Elements */}
                     <div className="absolute right-0 top-0 hidden lg:block">
                         <div className="flex items-center gap-4">
-                        <LuUsers className="w-16 h-16 text-gray-600" />
-                            <div className="flex items-center gap-2">
-                                <span className="text-4xl font-bold text-amber-400">350+</span>
-                                <span className="block text-2xl text-amber-400">Statisfied Clients</span>
+                            <LuUsers className="w-12 h-12 md:w-16 md:h-16 text-[#7D0202]" />
+                            <div className="flex flex-col items-start">
+                                <span className="text-2xl md:text-4xl font-bold text-amber-500">350+</span>
+                                <span className="text-sm md:text-2xl text-amber-600">Satisfied Clients</span>
                             </div>
                         </div>
-                        {/* <div className="mt-8">
-                            <img src="/toolbox-illustration.png" alt="Toolbox" className="w-48 h-auto" />
-                        </div> */}
                     </div>
+                    
 
                     {/* Stats Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
@@ -81,6 +79,16 @@ const ExpertiseSection: React.FC = () => {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                    {/* Mobile Clients Section */}
+                    <div className="lg:hidden mt-8">
+                        <div className="flex items-center justify-center gap-4">
+                            <LuUsers className="w-10 h-10 text-[#7D0202]" />
+                            <div className="flex flex-col items-start">
+                                <span className="text-3xl font-bold text-amber-500">350+</span>
+                                <span className="text-xl text-amber-600">Satisfied Clients</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

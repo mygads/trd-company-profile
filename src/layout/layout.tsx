@@ -12,7 +12,7 @@ const Layout: React.FC = () => {
             <div className="relative flex-1 flex flex-col overflow-y-auto overflow-x-hidden">
                 <Navbar />
 
-                <main className="flex-1 bg-gray-200 ">
+                <main className="flex-1 bg-white ">
                     {/* Render halaman sesuai route */}
                     <Outlet />
                 </main>
