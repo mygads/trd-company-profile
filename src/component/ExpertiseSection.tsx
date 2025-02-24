@@ -1,7 +1,6 @@
 import type React from "react"
-import { WrenchIcon, ClockIcon, HomeIcon, CameraIcon } from "lucide-react"
+import { WrenchIcon, ClockIcon, HomeIcon } from "lucide-react"
 import CountUp from "react-countup"
-import { FaUser } from "react-icons/fa"
 import { LuUsers } from "react-icons/lu"
 
 const ExpertiseSection: React.FC = () => {
