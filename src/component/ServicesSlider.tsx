@@ -116,7 +116,7 @@ const ServiceSlider: React.FC = () => {
             </div>
 
             {/* Slider Content */}
-            <div className="container mx-auto pb-16">
+            <div className="container mx-auto pb-22">
                 <Swiper
                     modules={[Navigation, Pagination]}
                     spaceBetween={30}
@@ -136,7 +136,7 @@ const ServiceSlider: React.FC = () => {
                     {services.map((service, index) => (
                         <SwiperSlide key={index}>
                             {/* Service Content */}
-                            <div className="gap-6 mx-30">
+                            <div className="gap-6 mx-12 md:mx-30 ">
                                 {/* Overview */}
                                 <div className="flex justify-between items-center space-y-8">
                                     {typeof service.icon === 'string' ? (
