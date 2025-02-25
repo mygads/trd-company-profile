@@ -1,6 +1,8 @@
 import ExpertiseSection from "../component/ExpertiseSection"
 import ServicePreview from "../component/ServicePreview"
 import { HomeBanner } from "../component/banner/HomeBanner"
+import WhyChooseUs from "../component/WhyChooseUs"
+import ReviewSlider from "../component/ReviewSlider"
 
 export const Home = () => {
     return (
@@ -8,6 +10,8 @@ export const Home = () => {
             <HomeBanner />
             <ExpertiseSection />
             <ServicePreview />
+            <WhyChooseUs />
+            <ReviewSlider />
         </>
     )
 }

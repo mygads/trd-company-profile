@@ -67,14 +67,14 @@ const ServicePreview: React.FC = () => {
         <section
             className="py-12 md:py-16 lg:py-24"
             style={{
-            background: `url(${tooltip}) white 50px 50px repeat`,
+                background: `url(${tooltip}) white 50px 50px repeat`,
             }}
         >
-            <div className="container mx-auto flex flex-col md:flex-row gap-8 md:gap-16">
-                <div className="md:w-1/4 flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
-                    <div className="w-24 h-2 bg-amber-400 self-center"></div>
-                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-900 text-center md:text-left">
-                    From Repairs to Renovations - We've Got You Covered!
+            <div className="container mx-4 md:mx-auto flex flex-col md:flex-row gap-8 md:gap-16">
+                <div className="md:w-1/4 text-2xl md:text-3xl lg:text-4xl font-bold text-[#7D0202] leading-tight flex items-center justify-center flex-col lg:flex-row gap-2 lg:gap-4">
+                    <span className="w-0 md:w-20 h-2 bg-amber-400 self-center"></span>
+                    <h2 className="text-xl md:text-3xl lg:text-4xl font-semibold text-[#7D0202]text-center md:text-left">
+                        From Repairs to Renovations - We've Got You Covered!
                     </h2>
                 </div>
 

@@ -38,7 +38,7 @@ const ExpertiseSection: React.FC = () => {
                     {/* Section Title */}
                     <div className="text-center mb-12 px-4">
                         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#7D0202] leading-tight flex items-center justify-center flex-col lg:flex-row gap-2 lg:gap-4">
-                            <div className="lg:w-12 bg-amber-400 w-20 h-1 md:h-2"></div>
+                            <div className="bg-amber-400 w-20 h-2"></div>
                             Our Proven Expertise in Every Project
                         </h2>
                         <p className="text-md md:text-lg leading-relaxed mt-6 md:mt-10">

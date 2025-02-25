@@ -5,3 +5,25 @@
 @theme {
     --font-primary: 'Oswald', sans-serif;
 }
+
+/* Add these styles to your global CSS file */
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: #cbd5e1;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #dc2626 !important;
+    transform: scale(1.2);
+}
+
+/* Optional: Add smooth transitions */
+.swiper-slide {
+    transition: all 300ms ease;
+}
+
+.swiper-slide:hover {
+    transform: translateY(-5px);
+}
