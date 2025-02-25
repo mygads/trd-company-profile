@@ -15,7 +15,7 @@ export const App = () => {
                         path=""
                         element={
                             <>
-                                <PageTitle title="Home | TRD Company Profile" />
+                                <PageTitle title="TRD Elite Services" />
                                 <Home />
                             </>
                         }
@@ -24,7 +24,7 @@ export const App = () => {
                         path="/"
                         element={
                             <>
-                                <PageTitle title="Home | TRD Company Profile" />
+                                <PageTitle title="TRD Elite Services" />
                                 <Home />
                             </>
                         }
@@ -33,7 +33,7 @@ export const App = () => {
                         path="/home"
                         element={
                             <>
-                                <PageTitle title="Home | TRD Company Profile" />
+                                <PageTitle title="TRD Elite Services" />
                                 <Home />
                             </>
                         }
@@ -42,7 +42,7 @@ export const App = () => {
                         path="/about-us"
                         element={
                             <>
-                                <PageTitle title="About Us | TRD Company Profile" />
+                                <PageTitle title="About Us | TRD Elite Services" />
                                 <AboutUs />
                             </>
                         }
@@ -51,16 +51,16 @@ export const App = () => {
                         path="/services"
                         element={
                             <>
-                                <PageTitle title="Services | TRD Company Profile" />
+                                <PageTitle title="Services | TRD Elite Services" />
                                 <Services />
                             </>
                         }
                     />
                     <Route
-                        path="/galery"
+                        path="/gallery"
                         element={
                             <>
-                                <PageTitle title="Galery | TRD Company Profile" />
+                                <PageTitle title="Gallery | TRD Elite Services" />
                                 <Galery />
                             </>
                         }
@@ -69,7 +69,7 @@ export const App = () => {
                         path="/review"
                         element={
                             <>
-                                <PageTitle title="Review | TRD Company Profile" />
+                                <PageTitle title="Review | TRD Elite Services" />
                                 <Services />
                             </>
                         }

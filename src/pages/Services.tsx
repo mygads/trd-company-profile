@@ -1,7 +1,11 @@
+import { ServicesBanner } from "../component/banner/ServicesBanner"
+import ServiceSlider from "../component/ServicesSlider"
+
 export const Services = () => {
     return (
-        <div>
-            <h1>Services</h1>
-        </div>
+        <>
+            <ServicesBanner />
+            <ServiceSlider />
+        </>
     )
 }

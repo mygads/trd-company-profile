@@ -8,16 +8,16 @@ const WhyChooseUs = () => {
     const isDesktop = typeof window !== 'undefined' ? window.innerWidth >= 1024 : false;
     const benefits = [
         {
-        title: "Experienced & Reliable Team",
-        color: "bg-gray-800",
+            title: "Experienced & Reliable Team",
+            color: "bg-gray-800",
         },
         {
-        title: "Affordable & Transparent Price",
-        color: "bg-gray-700",
+            title: "Affordable & Transparent Price",
+            color: "bg-gray-700",
         },
         {
-        title: "Quality Workmanship Guaranteed",
-        color: "bg-gray-600",
+            title: "Quality Workmanship Guaranteed",
+            color: "bg-gray-600",
         },
     ]
 

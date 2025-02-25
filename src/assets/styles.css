@@ -48,3 +48,37 @@
 .form-select {
     transition: all 200ms ease-in-out;
 }
+
+/* Add these styles to your global CSS */
+.swiper-pagination {
+    position: relative;
+    margin-top: 2rem;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #e5e7eb;
+    opacity: 1;
+    margin: 0 4px !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #dc2626;
+    transform: scale(1.2);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    transition: all 200ms ease-in-out;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: #febfbf;
+}
+
+.swiper-button-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

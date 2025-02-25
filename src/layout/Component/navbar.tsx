@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
     const menuItems = [
         { name: "Home", path: "/" },
         { name: "Services", path: "/services" },
-        { name: "About Us", path: "/about" },
+        { name: "About Us", path: "/about-us" },
         { name: "Gallery", path: "/gallery" },
         { name: "Review", path: "/review" },
     ]
@@ -70,13 +70,15 @@ const Navbar: React.FC = () => {
                             {item.name}
                         </Link>
                     ))}
-                    <Link
-                        to="/contact"
+                    <a
+                        href="https://wa.me/+6281234567890" // Replace with your actual WhatsApp number
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex items-center px-4 py-2 bg-red-600 text-white rounded-full transition-all duration-300 ease-in-out hover:bg-red-700 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-inner font-medium"
                     >
                         <img src={PhoneIcon} alt="Phone Icon" className="w-7 mr-2" />
                         Contact Us
-                    </Link>
+                    </a>
                 </div>
 
                 <button
@@ -128,14 +130,16 @@ const Navbar: React.FC = () => {
                                     {item.name}
                                 </Link>
                             ))}
-                            <Link
-                                to="/contact"
+                            <a
+                                href="https://wa.me/+6281234567890" // Replace with your actual WhatsApp number
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 onClick={() => setMobileMenuOpen(false)}
                                 className="w-full px-6 py-3 bg-red-600 text-white text-center rounded-full text-lg font-medium transition-all duration-300 ease-in-out hover:bg-red-700 hover:shadow-lg active:scale-95 active:shadow-inner flex justify-center items-center"
                             >
                                 <img src={PhoneIcon} alt="Phone Icon" className="w-7 mr-2" />
                                 Contact Us
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>
