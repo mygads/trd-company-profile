@@ -5,6 +5,7 @@ import PageTitle from './component/PageTitle';
 import { AboutUs } from './pages/AboutUs';
 import { Services } from './pages/Services';
 import { Galery } from './pages/Galery';
+import { Review } from './pages/Review';
 
 export const App = () => {
     return (
@@ -70,7 +71,7 @@ export const App = () => {
                         element={
                             <>
                                 <PageTitle title="Review | TRD Elite Services" />
-                                <Services />
+                                <Review />
                             </>
                         }
                     />
