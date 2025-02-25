@@ -1,7 +1,6 @@
-import React from 'react';
 import { Star, MessageCircle } from 'lucide-react';
 import { FaUser } from 'react-icons/fa';
-import bgReview from '../assets/images/bg-review.png';
+import bgReview from '../assets/desain/bg-review.png';
 
 interface Review {
     id: number;
