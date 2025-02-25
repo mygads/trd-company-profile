@@ -116,7 +116,10 @@ const ServiceSlider: React.FC = () => {
             </div>
 
             {/* Slider Content */}
-            <div className="container mx-auto pb-22">
+            <div className="container mx-auto pb-12">
+                {/* Custom pagination container - moved outside Swiper */}
+                
+                
                 <Swiper
                     modules={[Navigation, Pagination]}
                     spaceBetween={30}
@@ -129,10 +132,12 @@ const ServiceSlider: React.FC = () => {
                         clickable: true,
                         bulletClass: 'swiper-pagination-bullet',
                         bulletActiveClass: 'swiper-pagination-bullet-active',
+                        el: '.swiper-pagination-container', // Custom pagination container
                     }}
                     onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
                     className="relative"
                 >
+                    <div className="swiper-pagination-container w-full flex justify-center mt-8"></div>
                     {services.map((service, index) => (
                         <SwiperSlide key={index}>
                             {/* Service Content */}

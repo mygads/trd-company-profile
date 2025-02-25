@@ -12,6 +12,7 @@
     height: 8px;
     background: #cbd5e1;
     opacity: 1;
+    margin: 0 4px !important;
 }
 
 .swiper-pagination-bullet-active {
@@ -55,7 +56,7 @@
     margin-top: 2rem;
 }
 
-.swiper-pagination-bullet {
+/* .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
     background: #e5e7eb;
@@ -66,7 +67,7 @@
 .swiper-pagination-bullet-active {
     background: #dc2626;
     transform: scale(1.2);
-}
+} */
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -81,4 +82,37 @@
 .swiper-button-disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+/* Add these styles to your global CSS */
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #6B7280;
+    opacity: 0.8;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none;
+    outline: 2px;
+    outline-color: rgb(239 68 68);
+}
+
+/* Optional: Add smooth transitions */
+.form-input,
+.form-textarea,
+.form-select {
+    transition: all 200ms ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-section {
+        background-position: center;
+    }
+    
+    .form-container {
+        margin-top: 2rem;
+    }
 }
