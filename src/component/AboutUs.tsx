@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../assets/images/about-us.png';
+import image from '../assets/images/galleries/about-us.png';
 
 export const AboutUsSection: React.FC = () => {
     return (

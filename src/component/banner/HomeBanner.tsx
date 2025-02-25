@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import Background from '../../assets/images/home-corosel-bg.png'
+import Background from '../../assets/images/banner-bg/home-corosel-bg.png'
 
 export const HomeBanner = () => {
     return (

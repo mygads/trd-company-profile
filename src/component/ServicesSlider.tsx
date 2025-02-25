@@ -3,11 +3,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import tooltip from '../assets/desain/Tooltip.png'
-import handyman from '../assets/images/service-icon/handyman.png'
-import camera from '../assets/images/service-icon/camera.png'
-import painting from '../assets/images/service-icon/painting.png'
-import pressure from '../assets/images/service-icon/pressure.png'
-import replacement from '../assets/images/service-icon/replacement.png'
+import handyman from '../assets/icons/service-icon/handyman.png'
+import camera from '../assets/icons/service-icon/camera.png'
+import painting from '../assets/icons/service-icon/painting.png'
+import pressure from '../assets/icons/service-icon/pressure.png'
+import replacement from '../assets/icons/service-icon/replacement.png'
 
 
 interface Service {

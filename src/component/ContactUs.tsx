@@ -1,5 +1,5 @@
 import React, { useState, FormEvent } from 'react';
-import tooltip from '../assets/images/email-bg.png';
+import tooltip from '../assets/images/galleries/email-bg.png';
 
 interface FormData {
     name: string;

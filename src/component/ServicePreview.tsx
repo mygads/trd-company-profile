@@ -2,9 +2,9 @@ import type React from "react"
 import { useRef } from "react"
 import { Link } from "react-router-dom"
 import tooltip from '../assets/desain/Tooltip.png'
-import handyman from '../assets/images/handyman.jpeg'
-import cameraInstalation from '../assets/images/camera-instalation.jpeg'
-import windowsTinting from '../assets/images/windows.png'
+import handyman from '../assets/images/galleries/handyman.jpeg'
+import cameraInstalation from '../assets/images/galleries/camera-instalation.jpeg'
+import windowsTinting from '../assets/images/galleries/windows.png'
 
 
 interface Service {

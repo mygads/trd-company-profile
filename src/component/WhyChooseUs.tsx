@@ -1,8 +1,9 @@
 import { ThumbsUp } from "lucide-react"
-import beforeImg1 from '../assets/images/before-image1.jpeg';
-import beforeImg2 from '../assets/images/before-image2.jpeg';
-import afterImg1 from '../assets/images/after-image1.jpeg';
-import afterImg2 from '../assets/images/after-image2.jpeg';
+import beforeImg1 from '../assets/images/galleries/before-image1.jpeg';
+import beforeImg2 from '../assets/images/galleries/before-image2.jpeg';
+import afterImg1 from '../assets/images/galleries/after-image1.jpeg';
+import afterImg2 from '../assets/images/galleries/after-image2.jpeg';
+
 
 const WhyChooseUs = () => {
     const isDesktop = typeof window !== 'undefined' ? window.innerWidth >= 1024 : false;

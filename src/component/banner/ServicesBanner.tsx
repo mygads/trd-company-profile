@@ -1,4 +1,4 @@
-import Background from '../../assets/images/services-corosel-bg.png'
+import Background from '../../assets/images/banner-bg/services-corosel-bg.png'
 
 export const ServicesBanner = () => {
     return (
