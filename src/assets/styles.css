@@ -27,3 +27,24 @@
 .swiper-slide:hover {
     transform: translateY(-5px);
 }
+
+/* Add these styles to your global CSS */
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #6B7280;
+    opacity: 0.8;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none;
+    outline: 2px solid rgb(239 68 68);
+}
+
+/* Optional: Add smooth transitions */
+.form-input,
+.form-textarea,
+.form-select {
+    transition: all 200ms ease-in-out;
+}

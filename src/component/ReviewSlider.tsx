@@ -58,13 +58,13 @@ const ReviewSlider: React.FC = () => {
         <section className="py-16 bg-gray-50">
             <div className="container mx-auto px-4">
                 {/* Title */}
-                {/* <h2 className="text-3xl md:text-4xl font-bold text-center text-[#8B0000] mb-12">
-                    Your satisfaction is our priority!
-                </h2> */}
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#7D0202] leading-tight flex items-center justify-center flex-col lg:flex-row gap-2 lg:gap-4 mb-12">
-                    <span className="w-20 h-2 bg-amber-400"></span>
+                <h2 className="text-3xl md:text-4xl font-bold text-center text-[#7D0202] mb-12">
                     Your satisfaction is our priority!
                 </h2>
+                {/* <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#7D0202] leading-tight flex items-center justify-center flex-col lg:flex-row gap-2 lg:gap-4 mb-12">
+                    <span className="w-20 h-2 bg-amber-400"></span>
+                    Your satisfaction is our priority!
+                </h2> */}
 
                 {/* Slider */}
                 <Swiper

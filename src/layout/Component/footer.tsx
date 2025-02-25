@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     return (
         <footer className="w-full" style={{ background: 'linear-gradient(180deg, #262626 44.51%, #7D0202 100%)' }}>
         {/* Map Section */}
-            <div className="container h-[300px] mx-auto mt-20">
+            <div className="container h-[300px] mx-auto mt-0 md:mt-20">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4899.86725965252!2d98.57188677581314!3d3.5611079504804466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312f4a8158353f%3A0x49a0ac52c048fa8b!2sTRD%20SERVICE!5e1!3m2!1sid!2sid!4v1740234720652!5m2!1sid!2sid"
                     width="100%"
