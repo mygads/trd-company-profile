@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import Background from '../../assets/images/banner-bg/home-corosel-bg.png'
+import Background from '../../assets/images/banner-bg/banner-home.png'
 
 export const HomeBanner = () => {
     return (
@@ -10,6 +10,11 @@ export const HomeBanner = () => {
                 style={{
                     backgroundImage: `url(${Background})`,
                 }}
+            >
+            </div>
+            <div 
+                className="absolute bottom-0 right-0 h-10 md:h-20 bg-white w-7/10 ml-auto"
+                style={{ clipPath: 'polygon(10% 0, 100% 0, 100% 100%, 0 100%)' }}
             >
             </div>
 
