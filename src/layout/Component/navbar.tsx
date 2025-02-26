@@ -41,14 +41,14 @@ const Navbar: React.FC = () => {
 
     return (
         <nav className="bg-[#EBEBEB] sticky top-0 z-50">
-            <div className="container mx-auto flex items-center justify-between px-4 h-24">
-                <Link to="/" className="flex items-center space-x-3 group">
+            <div className="container mx-auto flex items-center justify-between px-4 h-16 md:h-24">
+                <Link to="/" className="flex items-center space-x-2 md:space-x-3 group">
                     <img
                         src={LogoIcon}
                         alt="Logo"
-                        className="h-20 w-auto transition-transform duration-300 group-hover:scale-105"
+                        className="md:h-20 h-14 w-auto transition-transform duration-300 group-hover:scale-105"
                     />
-                    <span className="text-xl font-bold text-gray-900">TRD Elite Services</span>
+                    <span className="md:text-xl text:md font-bold text-gray-900">TRD Elite Services</span>
                 </Link>
 
                 <div className="hidden lg:flex items-center space-x-16">
