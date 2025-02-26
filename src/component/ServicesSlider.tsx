@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
@@ -8,6 +8,8 @@ import camera from '../assets/icons/service-icon/camera.png'
 import painting from '../assets/icons/service-icon/painting.png'
 import pressure from '../assets/icons/service-icon/pressure.png'
 import replacement from '../assets/icons/service-icon/replacement.png'
+import type { Swiper as SwiperType } from 'swiper';
+import { useSearchParams } from 'react-router-dom';
 
 
 interface Service {
@@ -92,13 +94,43 @@ const services: Service[] = [
 
 const ServiceSlider: React.FC = () => {
     const [activeIndex, setActiveIndex] = useState(0);
+    const [searchParams] = useSearchParams();
+    const swiperRef = useRef<SwiperType | null>(null);
+    
+    // Mapping dari nama kategori ke indeks slide
+    const categoryToIndex = React.useMemo(() => ({
+        'handyman': 0,
+        'camera-installation': 1,
+        'window-tinting': 2,
+        'pressure-cleaning': 3,
+        'painting': 4
+    }), []);
+
+    // Set slide awal berdasarkan parameter URL ketika komponen dimuat
+    useEffect(() => {
+        const category = searchParams.get('category');
+        if (category && categoryToIndex[category as keyof typeof categoryToIndex] !== undefined) {
+            // Jika swiper sudah terinisialisasi, langsung pindah ke slide yang sesuai
+            if (swiperRef.current) {
+                swiperRef.current.slideTo(categoryToIndex[category as keyof typeof categoryToIndex]);
+
+                setTimeout(() => {
+                    document.getElementById('service-slider')?.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start'
+                    });
+                }, 100);
+            } else {
+                // Jika belum, set activeIndex yang akan digunakan ketika swiper diinisialisasi
+                setActiveIndex(categoryToIndex[category as keyof typeof categoryToIndex]);
+            }
+        }
+    }, [searchParams, categoryToIndex]);
 
     return (
-        <section className="relative">
+        <section id="service-slider" className="relative">
             {/* Top Banner */}
             <div className="relative h-20 bg-[#2D2D2D] w-7/10 ml-auto mb-12 skew-x-45">
-                {/* Diagonal cut */}
-                {/* <div className="absolute top-0 left-0 h-full w-20 bg-white transform skew-x-45 -translate-x-1/2"></div> */}
                 
                 {/* Pattern Overlay - unskewed using negative skew */}
                 <div className="absolute top-0 right-0 w-48 h-full overflow-hidden skew-x-[-45deg]">
@@ -117,13 +149,11 @@ const ServiceSlider: React.FC = () => {
 
             {/* Slider Content */}
             <div className="container mx-auto pb-12">
-                {/* Custom pagination container - moved outside Swiper */}
-                
-                
                 <Swiper
                     modules={[Navigation, Pagination]}
                     spaceBetween={30}
                     slidesPerView={1}
+                    initialSlide={activeIndex}
                     navigation={{
                         prevEl: '.swiper-button-prev',
                         nextEl: '.swiper-button-next',
@@ -134,10 +164,14 @@ const ServiceSlider: React.FC = () => {
                         bulletActiveClass: 'swiper-pagination-bullet-active',
                         el: '.swiper-pagination-container', // Custom pagination container
                     }}
+                    onSwiper={(swiper) => {
+                        swiperRef.current = swiper;
+                    }}
                     onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
                     className="relative"
                 >
                     <div className="swiper-pagination-container w-full flex justify-center mt-8"></div>
+
                     {services.map((service, index) => (
                         <SwiperSlide key={index}>
                             {/* Service Content */}

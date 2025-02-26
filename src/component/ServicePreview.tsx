@@ -28,7 +28,7 @@ const services: Service[] = [
         id: "handyman",
         title: "Handyman Services",
         image: handyman,
-        link: "/services/handyman",
+        link: "/services?category=handyman",
         description: "From small repairs to major fixes, we handle it all with precision and expertise. No job is too big or small!",
         icon: <VscTools className="text-white text-3xl" />
     },
@@ -36,7 +36,7 @@ const services: Service[] = [
         id: "camera",
         title: "Home Camera Installation",
         image: cameraInstalation,
-        link: "/services/camera-installation",
+        link: "/services?category=camera-installation",
         description: "Secure your home with professionally installed security cameras for 24/7 peace of mind.",
         icon: <BiCctv className="text-white text-3xl" />,
     },
@@ -44,7 +44,7 @@ const services: Service[] = [
         id: "window",
         title: "Window Tinting",
         image: windowsTinting,
-        link: "/services/window-tinting",
+        link: "/services?category=window-tinting",
         description: "Reduce heat, glare, and UV exposure while enhancing privacy with high-quality window tinting.",
         icon: <TbWindow className="text-white text-3xl" />,
     },
@@ -52,7 +52,7 @@ const services: Service[] = [
         id: "pressure",
         title: "Pressure Cleaning",
         image: pressureCleaning,
-        link: "/services/pressure-cleaning",
+        link: "/services?category=pressure-cleaning",
         description: "Restore your driveway and garage floor to a spotless finish with our high-pressure cleaning service.",
         icon: <MdOutlineWaterDrop className="text-white text-3xl" />,
     },
@@ -60,7 +60,7 @@ const services: Service[] = [
         id: "painting",
         title: "Painting",
         image: painting,
-        link: "/services/painting",
+        link: "/services?category=painting",
         description: "Revamp your space with expert painting services for a fresh, vibrant look.",
         icon: <RiPaintBrushLine className="text-white text-3xl" />,
     },
@@ -103,37 +103,73 @@ const ServicePreview: React.FC = () => {
                     className="md:w-3/4 overflow-x-auto scrollbar-hide scroll-smooth p-4"
                     style={{ scrollSnapType: "x mandatory" }}
                 >
-                    <div className="flex gap-6">
-                    {services.map((service) => (
-                        <Link
-                            key={service.id}
-                            to={service.link}
-                            className="relative flex-none w-full sm:w-[300px] md:w-[350px] h-[200px] sm:h-[250px] lg:h-[300px] rounded-lg overflow-hidden group transition-transform duration-300 hover:shadow-xl"
-                            style={{ scrollSnapAlign: "start" }}
-                            >
-                            <img
-                                src={service.image || handyman}
-                                alt={service.title}
-                                className="w-full h-full object-cover"
-                            />
-                            <div className="absolute bottom-0 left-0 right-0 h-[22%] bg-[#323232] flex items-center justify-center transition-transform duration-300 group-hover:hidden">
-                                <h3 className="text-lg sm:text-xl font-semibold text-white">
-                                    {service.title}
-                                </h3>
-                            </div>
-                            <div className="absolute inset-0 bg-gradient-to-b from-[rgba(0,0,0,0.76)] to-[rgba(176,46,46,0.76)] transform translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-center items-center text-center p-8">
-                                <div className="mb-2">{service.icon}</div>
-                                <h3 className="text-center mb-2 text-xl font-bold text-white">{service.title}</h3>
-                                <p className="text-white font-light text-lg text-left mb-3">{service.description}</p>
-                                <div className="ml-auto flex items-center text-white hover:text-amber-400 transition-colors">
-                                    <span className="mr-2">Read More</span>
-                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </Link>
-                    ))}
+                    <div className="relative">
+                        {/* Mobile navigation buttons */}
+                        <button 
+                            className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#7D0202] text-white p-2 rounded-r-lg z-10 md:hidden"
+                            onClick={() => {
+                                if (scrollContainerRef.current) {
+                                    scrollContainerRef.current.scrollBy({
+                                        left: -300,
+                                        behavior: 'smooth'
+                                    });
+                                }
+                            }}
+                        >
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        
+                        <button 
+                            className="absolute right-0 top-1/2 -translate-y-1/2 bg-[#7D0202] text-white p-2 rounded-l-lg z-10 md:hidden"
+                            onClick={() => {
+                                if (scrollContainerRef.current) {
+                                    scrollContainerRef.current.scrollBy({
+                                        left: 300,
+                                        behavior: 'smooth'
+                                    });
+                                }
+                            }}
+                        >
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                        
+                        {/* Services list */}
+                        <div className="flex gap-6">
+                            {services.map((service) => (
+                                <Link
+                                    key={service.id}
+                                    to={service.link}
+                                    className="relative flex-none w-full sm:w-[300px] md:w-[350px] h-[200px] sm:h-[250px] lg:h-[300px] rounded-lg overflow-hidden group transition-transform duration-300 hover:shadow-xl"
+                                    style={{ scrollSnapAlign: "start" }}
+                                >
+                                    <img
+                                        src={service.image || handyman}
+                                        alt={service.title}
+                                        className="w-full h-full object-cover"
+                                    />
+                                    <div className="absolute bottom-0 left-0 right-0 h-[22%] bg-[#323232] flex items-center justify-center transition-transform duration-300 group-hover:hidden">
+                                        <h3 className="text-lg sm:text-xl font-semibold text-white">
+                                            {service.title}
+                                        </h3>
+                                    </div>
+                                    <div className="absolute inset-0 bg-gradient-to-b from-[rgba(0,0,0,0.76)] to-[rgba(176,46,46,0.76)] transform translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-center items-center text-center p-8">
+                                        <div className="mb-2">{service.icon}</div>
+                                        <h3 className="text-center mb-2 text-xl font-bold text-white">{service.title}</h3>
+                                        <p className="text-white font-light text-lg text-left mb-3">{service.description}</p>
+                                        <div className="ml-auto flex items-center text-white hover:text-amber-400 transition-colors">
+                                            <span className="mr-2">Read More</span>
+                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
