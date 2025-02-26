@@ -39,7 +39,7 @@ const ContactUs: React.FC = () => {
             ${formData.message}
         `;
         
-        window.location.href = `mailto:info@trdelite.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = `mailto:trdservices@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     };
 
     return (

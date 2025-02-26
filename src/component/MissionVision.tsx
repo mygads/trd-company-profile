@@ -91,7 +91,7 @@ const MissionVision: React.FC = () => {
                                     <ThumbsUp className="w-6 h-6 text-amber-400 flex-shrink-0" />
                                     <div className="flex flex-col">
                                         <span className="text-lg font-semibold">{benefit.title}</span>
-                                        <span className="text-sm text-gray-300">{benefit.description}</span>
+                                        <span className="text-md text-gray-300">{benefit.description}</span>
                                     </div>
                                 </div>
                             </div>
@@ -111,7 +111,7 @@ const MissionVision: React.FC = () => {
                                     <ThumbsUp className="w-6 h-6 text-amber-400 flex-shrink-0" />
                                     <div className="flex flex-col">
                                         <span className="text-lg font-semibold">{benefit.title}</span>
-                                        <span className="text-sm text-gray-300">{benefit.description}</span>
+                                        <span className="text-md text-gray-300">{benefit.description}</span>
                                     </div>
                                 </div>
                             </div>

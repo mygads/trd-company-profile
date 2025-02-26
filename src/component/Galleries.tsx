@@ -60,7 +60,7 @@ const Galleries: React.FC = () => {
                                         rightImage={image.after}
                                         sliderPositionPercentage={0.5}
                                         handle={
-                                            <div className="w-4 h-4 bg-red-600 rounded-full border-2 border-white" />
+                                            <div key={`handle-${index}`} className="w-4 h-4 bg-red-600 rounded-full border-2 border-white" style={{ zIndex: 2 }} />
                                         }
                                     />
                                 </div>
