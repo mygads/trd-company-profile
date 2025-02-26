@@ -97,6 +97,41 @@ const ServicePreview: React.FC = () => {
                     </h2>
                 </div>
 
+                <div className="absolute left-0 mt-45 z-10 md:hidden">
+                    <button 
+                        className="bg-[#7D0202] text-white p-2 rounded-r-lg"
+                        onClick={() => {
+                            if (scrollContainerRef.current) {
+                                scrollContainerRef.current.scrollBy({
+                                    left: -300,
+                                    behavior: 'smooth'
+                                });
+                            }
+                        }}
+                    >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                </div>
+                
+                <div className="absolute right-0 mt-45 z-10 md:hidden">
+                    <button 
+                        className="bg-[#7D0202] text-white p-2 rounded-l-lg"
+                        onClick={() => {
+                            if (scrollContainerRef.current) {
+                                scrollContainerRef.current.scrollBy({
+                                    left: 300,
+                                    behavior: 'smooth'
+                                });
+                            }
+                        }}
+                    >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
                 {/* Services Scroll Container */}
                 <div
                     ref={scrollContainerRef}
@@ -104,38 +139,6 @@ const ServicePreview: React.FC = () => {
                     style={{ scrollSnapType: "x mandatory" }}
                 >
                     <div className="relative">
-                        {/* Mobile navigation buttons */}
-                        <button 
-                            className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#7D0202] text-white p-2 rounded-r-lg z-10 md:hidden"
-                            onClick={() => {
-                                if (scrollContainerRef.current) {
-                                    scrollContainerRef.current.scrollBy({
-                                        left: -300,
-                                        behavior: 'smooth'
-                                    });
-                                }
-                            }}
-                        >
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                            </svg>
-                        </button>
-                        
-                        <button 
-                            className="absolute right-0 top-1/2 -translate-y-1/2 bg-[#7D0202] text-white p-2 rounded-l-lg z-10 md:hidden"
-                            onClick={() => {
-                                if (scrollContainerRef.current) {
-                                    scrollContainerRef.current.scrollBy({
-                                        left: 300,
-                                        behavior: 'smooth'
-                                    });
-                                }
-                            }}
-                        >
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
-                        </button>
                         
                         {/* Services list */}
                         <div className="flex gap-6">
@@ -143,13 +146,13 @@ const ServicePreview: React.FC = () => {
                                 <Link
                                     key={service.id}
                                     to={service.link}
-                                    className="relative flex-none w-full sm:w-[300px] md:w-[350px] h-[200px] sm:h-[250px] lg:h-[300px] rounded-lg overflow-hidden group transition-transform duration-300 hover:shadow-xl"
+                                    className="relative flex-none w-[300px] md:w-[350px] h-[200px] sm:h-[250px] lg:h-[300px] rounded-lg overflow-hidden group transition-transform duration-300 hover:shadow-xl bg-[#323232] scroll-snap-align-start"
                                     style={{ scrollSnapAlign: "start" }}
                                 >
                                     <img
                                         src={service.image || handyman}
                                         alt={service.title}
-                                        className="w-full h-full object-cover"
+                                        className="object-cover w-full h-full"
                                     />
                                     <div className="absolute bottom-0 left-0 right-0 h-[22%] bg-[#323232] flex items-center justify-center transition-transform duration-300 group-hover:hidden">
                                         <h3 className="text-lg sm:text-xl font-semibold text-white">
@@ -157,9 +160,9 @@ const ServicePreview: React.FC = () => {
                                         </h3>
                                     </div>
                                     <div className="absolute inset-0 bg-gradient-to-b from-[rgba(0,0,0,0.76)] to-[rgba(176,46,46,0.76)] transform translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-center items-center text-center p-8">
-                                        <div className="mb-2">{service.icon}</div>
-                                        <h3 className="text-center mb-2 text-xl font-bold text-white">{service.title}</h3>
-                                        <p className="text-white font-light text-lg text-left mb-3">{service.description}</p>
+                                        <div className="mb-1 md:mb-2">{service.icon}</div>
+                                        <h3 className="text-center mb-1 md:mb-2 text-lg md:text-xl font-bold text-white">{service.title} </h3>
+                                        <p className="text-white font-light text-md md:text-lg text-left md:mb-3 mb-1">{service.description}</p>
                                         <div className="ml-auto flex items-center text-white hover:text-amber-400 transition-colors">
                                             <span className="mr-2">Read More</span>
                                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
