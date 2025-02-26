@@ -2,9 +2,9 @@ import type React from "react"
 import { useRef } from "react"
 import { Link } from "react-router-dom"
 import tooltip from '../assets/desain/Tooltip.png'
-import handyman from '../assets/images/galleries/handyman.jpeg'
-import cameraInstalation from '../assets/images/galleries/camera-instalation.jpeg'
-import windowsTinting from '../assets/images/galleries/windows.png'
+import handyman from '../assets/images/galleries/handyman.png'
+import cameraInstalation from '../assets/images/galleries/camera-instalation.png'
+import windowsTinting from '../assets/images/galleries/windows-tinting.png'
 import pressureCleaning from '../assets/images/galleries/pressure-clean.png'
 import painting from '../assets/images/galleries/painting-services.png'
 import { VscTools } from "react-icons/vsc"

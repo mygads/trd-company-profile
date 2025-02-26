@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
                         </Link>
                     ))}
                     <a
-                        href="https://wa.me/+6281234567890" // Replace with your actual WhatsApp number
+                        href="https://wa.me/61401947050" // Replace with your actual WhatsApp number
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center px-4 py-2 bg-red-600 text-white rounded-full transition-all duration-300 ease-in-out hover:bg-red-700 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-inner font-medium"
@@ -131,7 +131,7 @@ const Navbar: React.FC = () => {
                                 </Link>
                             ))}
                             <a
-                                href="https://wa.me/+6281234567890" // Replace with your actual WhatsApp number
+                                href="https://wa.me/61401947050" // Replace with your actual WhatsApp number
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => setMobileMenuOpen(false)}
