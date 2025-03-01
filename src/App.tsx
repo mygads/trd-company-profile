@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home } from './pages/Home';
 import Layout from './layout/layout';
-import PageTitle from './component/PageTitle';
 import { AboutUs } from './pages/AboutUs';
 import { Services } from './pages/Services';
 import { Galery } from './pages/Galery';
 import { Review } from './pages/Review';
+import MetaTags from './component/MetaTags';
 
 export const App = () => {
     return (
@@ -16,7 +16,10 @@ export const App = () => {
                         path=""
                         element={
                             <>
-                                <PageTitle title="TRD Elite Services" />
+                                <MetaTags 
+                                    title="TRD Elite Services"
+                                    description="Welcome to TRD Elite Services - Your trusted partner for quality services"
+                                />
                                 <Home />
                             </>
                         }
@@ -25,7 +28,10 @@ export const App = () => {
                         path="/"
                         element={
                             <>
-                                <PageTitle title="TRD Elite Services" />
+                                <MetaTags 
+                                    title="TRD Elite Services"
+                                    description="Welcome to TRD Elite Services - Your trusted partner for quality services"
+                                />
                                 <Home />
                             </>
                         }
@@ -34,7 +40,10 @@ export const App = () => {
                         path="/home"
                         element={
                             <>
-                                <PageTitle title="TRD Elite Services" />
+                                <MetaTags 
+                                    title="TRD Elite Services"
+                                    description="Welcome to TRD Elite Services - Your trusted partner for quality services"
+                                />
                                 <Home />
                             </>
                         }
@@ -43,7 +52,10 @@ export const App = () => {
                         path="/about-us"
                         element={
                             <>
-                                <PageTitle title="About Us | TRD Elite Services" />
+                                <MetaTags 
+                                    title="About Us"
+                                    description="Learn more about TRD Elite Services"
+                                />
                                 <AboutUs />
                             </>
                         }
@@ -52,7 +64,10 @@ export const App = () => {
                         path="/services"
                         element={
                             <>
-                                <PageTitle title="Services | TRD Elite Services" />
+                                <MetaTags 
+                                    title="Services"
+                                    description="Professional services offered by TRD Elite Services"
+                                />
                                 <Services />
                             </>
                         }
@@ -61,7 +76,10 @@ export const App = () => {
                         path="/gallery"
                         element={
                             <>
-                                <PageTitle title="Gallery | TRD Elite Services" />
+                                <MetaTags 
+                                    title="Gallery"
+                                    description="View our gallery of professional services and results"
+                                />
                                 <Galery />
                             </>
                         }
@@ -70,7 +88,10 @@ export const App = () => {
                         path="/review"
                         element={
                             <>
-                                <PageTitle title="Review | TRD Elite Services" />
+                                <MetaTags 
+                                    title="Review"
+                                    description="Read reviews from our satisfied customers"
+                                />
                                 <Review />
                             </>
                         }
