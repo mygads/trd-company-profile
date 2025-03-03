@@ -1,8 +1,8 @@
 import { ThumbsUp } from "lucide-react"
-import beforeImg1 from '../assets/images/galleries/before-image1.jpeg';
-import beforeImg2 from '../assets/images/galleries/before-image2.jpeg';
-import afterImg1 from '../assets/images/galleries/after-image1.jpeg';
-import afterImg2 from '../assets/images/galleries/after-image2.jpeg';
+import beforeImg1 from '../assets/images/galleries/before1.png';
+import beforeImg2 from '../assets/images/galleries/before2.png';
+import afterImg1 from '../assets/images/galleries/after1.png';
+import afterImg2 from '../assets/images/galleries/after2.png';
 
 
 const WhyChooseUs = () => {

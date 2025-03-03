@@ -15,75 +15,83 @@ const Reviews = () => {
     const reviews: Review[] = [
         {
             id: 1,
-            name: "Sophia Anderson",
-            position: "Internal Implementation Officer",
-            comment: "Top-notch service! The team was professional, efficient, and the results were beyond my expectations. Highly recommended!",
+            name: "Mark D.",
+            position: "Homeowner",
+            comment: "TRD did an incredible job restoring my old, creaky wooden stairs. They reinforced the structure and gave it a beautiful finish. Now, I feel safe walking up and down without worrying about loose steps. Highly recommended!",
             rating: 5,
             avatarColor: "bg-green-100"
         },
         {
             id: 2,
-            name: "Michael Roberts",
-            position: "Property Manager",
-            comment: "Top-notch service! The team was professional, efficient, and the results were beyond my expectations. Highly recommended!",
+            name: "Brandon M.",
+            position: "Interior Designer",
+            comment: "I’m amazed at the level of precision TRD puts into their work. Every line, finish, and touch was flawless. They truly take pride in their craftsmanship!",
             rating: 5,
-            avatarColor: "bg-green-100"
+            avatarColor: "bg-pink-100"
         },
         {
             id: 3,
-            name: "Emma Thompson",
+            name: "Eric W.",
             position: "Home Owner",
-            comment: "Top-notch service! The team was professional, efficient, and the results were beyond my expectations. Highly recommended!",
+            comment: "From the first call to project completion, TRD made everything seamless. The team was super friendly, answered all my questions, and got the job done faster than I expected. Will definitely use them again!",
             rating: 5,
             avatarColor: "bg-green-100"
         },
         {
             id: 4,
-            name: "David Chen",
-            position: "Business Owner",
-            comment: "Top-notch service! The team was professional, efficient, and the results were beyond my expectations. Highly recommended!",
-            rating: 5,
-            avatarColor: "bg-green-100"
+            name: "Mark P.",
+            position: "Homeowner",
+            comment: "I was worried about my front windows facing the street, but TRD installed a privacy film that keeps people from seeing inside while still letting in natural light. A simple but effective upgrade!",
+            rating: 4,
+            avatarColor: "bg-yellow-100"
         },
         {
             id: 5,
-            name: "Sarah Williams",
-            position: "Interior Designer",
-            comment: "Top-notch service! The team was professional, efficient, and the results were beyond my expectations. Highly recommended!",
+            name: "Karen W.",
+            position: "Homeowner",
+            comment: "The TRD team did an amazing job repainting my entire house. They helped me pick the perfect color scheme and finished ahead of schedule. My home looks fresh and new again!",
             rating: 5,
             avatarColor: "bg-pink-100"
         },
         {
             id: 6,
-            name: "James Patterson",
-            position: "Real Estate Agent",
-            comment: "Top-notch service! The team was professional, efficient, and the results were beyond my expectations. Highly recommended!",
+            name: "Chris D.",
+            position: "Daily Commuter",
+            comment: "I was about to replace my car’s headlights, but TRD suggested a restoration instead. They brought back the original shine, and now my night visibility is so much better. Saved me a ton of money!",
             rating: 5,
             avatarColor: "bg-green-100"
         },
         {
             id: 7,
-            name: "Lisa Johnson",
-            position: "Office Manager",
-            comment: "Top-notch service! The team was professional, efficient, and the results were beyond my expectations. Highly recommended!",
+            name: "Chris L.",
+            position: "Facility Manager",
+            comment: "Not only does TRD provide incredible results, but their customer service is top-notch. They kept me informed every step of the way and ensured I was happy with everything!",
             rating: 5,
             avatarColor: "bg-green-100"
         },
         {
             id: 8,
-            name: "Robert Wilson",
-            position: "Facility Manager",
-            comment: "Top-notch service! The team was professional, efficient, and the results were beyond my expectations. Highly recommended!",
+            name: "Jessica L.",
+            position: "Small Business Owner",
+            comment: "TRD’s pressure washing service was quick, efficient, and left my garage port spotless. The team was professional, and I couldn’t believe the difference it made!",
+            rating: 4,
+            avatarColor: "bg-yellow-100"
+        },
+        {
+            id: 9,
+            name: "Samantha W.",
+            position: "Resident",
+            comment: "Our mailbox was rusted and falling apart, but TRD restored it beautifully! They fixed the structure, gave it a fresh coat of paint, and now it looks brand new. It’s the small details that make a big difference. Thank you, TRD!",
             rating: 5,
             avatarColor: "bg-green-100"
         },
         {
-            id: 9,
-            name: "Emily Davis",
-            position: "Property Owner",
-            comment: "Top-notch service! The team was professional, efficient, and the results were beyond my expectations. Highly recommended!",
+            id: 10,
+            name: "Jason L.",
+            position: "Car Enthusiast",
+            comment: "I was blown away by how spotless my car looked after TRD’s deep cleaning service. They removed every stain from the seats, polished the dashboard, and made the exterior shine like it just came from the showroom. Amazing job!",
             rating: 5,
-            avatarColor: "bg-green-100"
+            avatarColor: "bg-pink-100"
         }
     ];
 

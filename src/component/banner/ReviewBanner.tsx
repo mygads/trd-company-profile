@@ -1,4 +1,4 @@
-import Background from '../../assets/images/banner-bg/services-banner.png'
+import Background from '../../assets/images/banner-bg/review-banner.png'
 
 export const ReviewBanner = () => {
     return (
@@ -42,11 +42,11 @@ export const ReviewBanner = () => {
 
             {/* Content Container */}
             <div className="relative container mx-auto px-4 h-full flex items-center">
-                <div className="max-w-2xl text-white space-y-6">
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                <div className="max-w-2xl text-black space-y-6">
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-shadow-lg">
                         Your Experience Matters to Us!
                     </h1>
-                    <p className="text-lg md:text-xl font-light text-white leading-relaxed">
+                    <p className="text-lg md:text-xl font-light text-black leading-relaxed">
                         Help us improve by sharing your thoughts. Your feedback fuels our commitment to excellence!
                     </p>
                 </div>

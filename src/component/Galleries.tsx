@@ -1,16 +1,26 @@
 import React, { useState } from 'react';
 import ReactCompareImage from 'react-compare-image';
 import { X } from 'lucide-react';
-import after1 from '../assets/images/galleries/after-image1.jpeg';
-import before1 from '../assets/images/galleries/before-image1.jpeg';
-import after2 from '../assets/images/galleries/after-image2.jpeg';
-import before2 from '../assets/images/galleries/before-image2.jpeg';
-import gallery1 from '../assets/images/galleries/gallery1.png';
-import gallery2 from '../assets/images/galleries/gallery2.png';
-import gallery3 from '../assets/images/galleries/gallery3.png';
-import gallery4 from '../assets/images/galleries/gallery4.png';
-import gallery5 from '../assets/images/galleries/gallery5.png';
-import gallery6 from '../assets/images/galleries/gallery6.png';
+import after1 from '../assets/images/galleries/after1.png';
+import before1 from '../assets/images/galleries/before1.png';
+import after2 from '../assets/images/galleries/after2.png';
+import before2 from '../assets/images/galleries/before2.png';
+import after3 from '../assets/images/galleries/after3.png';
+import before3 from '../assets/images/galleries/before3.png';
+import after4 from '../assets/images/galleries/after4.png';
+import before4 from '../assets/images/galleries/before4.png';
+import after5 from '../assets/images/galleries/after5.png';
+import before5 from '../assets/images/galleries/before5.png';
+import image1 from '../assets/images/galleries/image1.png';
+import image2 from '../assets/images/galleries/image2.png';
+import image3 from '../assets/images/galleries/image3.png';
+import image4 from '../assets/images/galleries/image4.png';
+import image5 from '../assets/images/galleries/image5.png';
+import image6 from '../assets/images/galleries/image6.png';
+import image7 from '../assets/images/galleries/image7.png';
+import image8 from '../assets/images/galleries/image8.png';
+
+
 
 interface GalleryImage {
     id: number;
@@ -31,16 +41,43 @@ const Galleries: React.FC = () => {
             before: before2,
             after: after2,
             alt: "Bench restoration transformation"
-        }
+        },
+        {
+            before: before3,
+            after: after3,
+            alt: "Concrete patio transformation"
+        },
+        {
+            before: before4,
+            after: after4,
+            alt: "Concrete patio transformation"
+        },
+        {
+            before: before5,
+            after: after5,
+            alt: "Concrete patio transformation"
+        },
     ];
 
     const galleryImages: GalleryImage[] = [
-        { id: 1, src: gallery1, alt: "Carpet cleaning" },
-        { id: 2, src: gallery2, alt: "Car interior detailing" },
-        { id: 3, src: gallery3, alt: "Exterior fixtures" },
-        { id: 4, src: gallery4, alt: "Concrete patio work" },
-        { id: 5, src: gallery5, alt: "Vehicle interior cleaning" },
-        { id: 6, src: gallery6, alt: "Outdoor structure installation" }
+        { id: 1, src: after1, alt: "Carpet cleaning" },
+        { id: 2, src: after2, alt: "Car interior detailing" },
+        { id: 3, src: after3, alt: "Exterior fixtures" },
+        { id: 4, src: after4, alt: "Concrete patio work" },
+        { id: 5, src: after5, alt: "Vehicle interior cleaning" },
+        { id: 6, src: image1, alt: "Carpet cleaning" },
+        { id: 7, src: image2, alt: "Car interior detailing" },
+        { id: 8, src: image3, alt: "Exterior fixtures" },
+        { id: 9, src: image4, alt: "Concrete patio work" },
+        { id: 10, src: image5, alt: "Vehicle interior cleaning" },
+        { id: 11, src: image6, alt: "Concrete patio work" },
+        { id: 12, src: image7, alt: "Concrete patio work" },
+        { id: 13, src: image8, alt: "Concrete patio work" },
+        { id: 14, src: before1, alt: "Concrete patio work" },
+        { id: 15, src: before2, alt: "Concrete patio work" },
+        { id: 16, src: before3, alt: "Concrete patio work" },
+        { id: 17, src: before4, alt: "Concrete patio work" },
+        { id: 18, src: before5, alt: "Concrete patio work" },
     ];
 
     return (
@@ -49,10 +86,10 @@ const Galleries: React.FC = () => {
                 <h2 className="text-3xl font-bold text-[#8B0000] mb-8">
                     Swipe to Reveal! – See the Transformation
                 </h2>
-                <div className="flex flex-col md:flex-row gap-8">
+                <div className="space-y-8">
                     {/* Left Side - Before/After Sliders */}
-                    <div className="w-full md:w-1/3">
-                        <div className="space-y-8">
+                    <div className="w-full ">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {beforeAfterImages.map((image, index) => (
                                 <div key={index} className="shadow-xl rounded-lg overflow-hidden max-h-[250px]">
                                     <ReactCompareImage
@@ -69,8 +106,8 @@ const Galleries: React.FC = () => {
                     </div>
 
                     {/* Right Side - Gallery Grid */}
-                    <div className="w-full md:w-2/3 my-auto">
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <div className="w-full">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {galleryImages.map((image) => (
                                 <div
                                     key={image.id}
